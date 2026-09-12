@@ -1,0 +1,170 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+.editor-container {
+    width: 100%;
+    max-width: 900px;
+
+    background-color: white;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    margin-bottom: 15px;
+}
+
+button {
+    border: none;
+    background-color: #222;
+    color: white;
+
+    padding: 9px 13px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #444;
+}
+
+input[type="color"] {
+    width: 42px;
+    height: 38px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+}
+
+textarea {
+    width: 100%;
+    min-height: 350px;
+
+    resize: vertical;
+
+    padding: 15px;
+
+    border: 2px solid #ddd;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+
+    color: #222;
+
+    background-color: white;
+}
+
+textarea:focus {
+    border-color: #555;
+}
+
+.editor-info {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 12px;
+
+    color: #555;
+
+    font-size: 14px;
+}
+
+
+/* Tablet */
+@media (max-width: 700px) {
+
+    .editor-container {
+        padding: 18px;
+    }
+
+    textarea {
+        min-height: 300px;
+    }
+
+    button {
+        padding: 8px 10px;
+        font-size: 13px;
+    }
+}
+
+
+/* Mobile */
+@media (max-width: 500px) {
+
+    body {
+        padding: 10px;
+        align-items: flex-start;
+    }
+
+    .editor-container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .toolbar {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    button {
+        width: 100%;
+    }
+
+    input[type="color"] {
+        width: 100%;
+    }
+
+    textarea {
+        min-height: 280px;
+        font-size: 15px;
+    }
+
+    .editor-info {
+        flex-direction: column;
+        gap: 5px;
+    }
+}

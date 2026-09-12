@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Simple Text Editor</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="editor-container">
+
+        <h1>Simple Text Editor</h1>
+
+        <!-- Toolbar -->
+        <div class="toolbar">
+
+            <button onclick="SetOp('bold')">Bold</button>
+            <button onclick="SetOp('italic')">Italic</button>
+            <button onclick="SetOp('underline')">Underline</button>
+
+            <button onclick="SetOp('increase')">A+</button>
+            <button onclick="SetOp('decrease')">A-</button>
+
+            <button onclick="SetOp('left')">Left</button>
+            <button onclick="SetOp('center')">Center</button>
+            <button onclick="SetOp('right')">Right</button>
+
+            <input type="color" id="textColor">
+
+            <button onclick="SetOp('color')">Text Color</button>
+
+            <input type="color" id="backgroundColor">
+
+            <button onclick="SetOp('background')">Background</button>
+
+            <button onclick="SetOp('copy')">Copy</button>
+            <button onclick="SetOp('clear')">Clear</button>
+
+            <button onclick="SetOp('undo')">Undo</button>
+            <button onclick="SetOp('redo')">Redo</button>
+
+        </div>
+
+        <!-- Text Area -->
+        <textarea
+            id="textarea"
+            placeholder="Start typing here..."
+        ></textarea>
+
+        <!-- Information -->
+        <div class="editor-info">
+
+            <span>
+                Characters:
+                <strong id="characters">0</strong>
+            </span>
+
+            <span>
+                Words:
+                <strong id="words">0</strong>
+            </span>
+
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
